@@ -8,12 +8,22 @@ Referencia: `docs/Propuesta_FEM_Tooling.pdf` (lo que ve el cliente) y el artefac
 - [x] Tokens de marca iniciales: navy + teal, tipografía Archivo/Inter — falta el logo real en alta resolución (hoy es texto "FEM TOOLING")
 
 ## 1. Contenido base (bloqueante para diseño real)
-- [ ] Confirmar teléfono/WhatsApp correcto
+
+**Zona gris — Mitchell lo resuelve directamente, sin pasar por el cliente todavía:**
+- [ ] Teléfono/WhatsApp correcto — Mitchell lo está confirmando (Google/Facebook/llamando)
+- [ ] Correo de GABAN para pruebas del formulario — falta que Mitchell lo comparta para conectar el envío real (ver sección 4)
+- Analytics: se decidió **esperar** el acceso al GA4 existente del cliente (`G-BF2FDR6KMM`) en vez de crear uno nuevo — no crear nada aparte.
+
+**Bloqueante — solo lo puede responder FEM TOOLING:**
 - [ ] Reunir fotos en alta resolución (servicios, planta, proyectos)
 - [ ] Redactar/curar texto de Servicios, Empresa y 3–6 casos de Proyectos
 - [ ] Confirmar certificaciones (si existen) con documento de respaldo
-- [ ] Definir destino de correo para el formulario de cotización
 - [ ] Decidir si se mantiene, simplifica o elimina la venta de piezas sueltas
+- [ ] Cobertura geográfica real (Querétaro / Bajío / nacional / internacional)
+- [ ] Aprobar/redactar el aviso de privacidad (o su asesor legal)
+
+_Confirmado con Mitchell: ninguna de las de arriba se sabía de antemano — las 4 quedan
+como preguntas directas para FEM TOOLING cuando se agende la sesión de descubrimiento._
 
 ## 2. Componentes compartidos
 - [x] Header + navegación (con CTA de cotización)
@@ -36,9 +46,9 @@ certificaciones) — ver comentarios `TODO` en el código._
 
 ## 4. Funcionalidad
 - [x] Formulario de cotización con adjuntos — UI lista, guarda en consola
-- [ ] **Bloqueante:** conectar proveedor de correo real (Resend/SendGrid) para que el formulario notifique de verdad — hoy es una ruta de prueba (`src/app/api/cotizacion/route.ts`)
+- [ ] Conectar proveedor de correo real (Resend, gratis para este volumen) apuntando al correo de GABAN que Mitchell comparta — hoy es una ruta de prueba (`src/app/api/cotizacion/route.ts`) que solo guarda en consola
 - [ ] Panel de indicadores (reporte simple sobre Analytics)
-- [ ] Conectar Google Analytics existente (`G-BF2FDR6KMM`) si el cliente da acceso
+- [ ] Conectar Google Analytics: **en espera** del acceso del cliente a `G-BF2FDR6KMM` (decisión tomada: no crear una propiedad nueva aparte)
 
 ## 5. SEO técnico
 - [ ] Un solo H1 por página, metadatos únicos, sin mezcla de idiomas sin criterio

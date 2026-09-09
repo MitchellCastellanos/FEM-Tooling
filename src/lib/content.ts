@@ -7,11 +7,12 @@ export const site = {
   since: 2018,
   city: "El Marqués, Querétaro",
   address: "Carretera Estatal 500 Km 8.3, El Marqués, Querétaro",
-  // TODO: confirmar cuál teléfono es el vigente (el sitio actual muestra dos distintos).
+  // Mitchell lo está confirmando directamente (Google/Facebook/llamando) — no preguntar al cliente todavía.
   phone: "+52 442 261 5052",
-  // TODO: confirmar si este número recibe WhatsApp.
+  // Depende del teléfono de arriba — confirmar junto con él si recibe WhatsApp.
   whatsappNumber: "5214422615052",
-  // TODO: confirmar correo real del equipo comercial que debe recibir las cotizaciones.
+  // TODO: correo de GABAN para pruebas mientras se confirma el correo real del cliente
+  // (pendiente de que Mitchell lo comparta) — ver CHECKLIST.md, sección "Zona gris".
   quoteEmail: "contacto@femtooling.com",
   hours: "Lunes a viernes, 8:00 a.m. a 4:00 p.m.",
   siteUrl: "https://femtooling.com",
