@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Calidad en manufactura",
   description:
     "Política de calidad de FEM TOOLING: diseño, manufactura, instalación y mantenimiento de herramentales.",
+  alternates: { canonical: "/calidad" },
 };
 
 export default function CalidadPage() {

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { TrustStrip } from "@/components/TrustStrip";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
-import { site } from "@/lib/content";
+import { images, site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Empresa",
   description: `Conoce a ${site.name}, taller de diseño y manufactura de herramentales en ${site.city} desde ${site.since}.`,
+  alternates: { canonical: "/nosotros" },
 };
 
 export default function NosotrosPage() {
@@ -21,7 +22,12 @@ export default function NosotrosPage() {
             cliente.
           </p>
         </div>
-        <PhotoPlaceholder label="Foto de equipo / taller pendiente" className="h-56 rounded-md" />
+        <PhotoPlaceholder
+          label="Foto de equipo / taller pendiente"
+          src={images.empresaEquipo}
+          alt="Equipo de FEM TOOLING en el taller"
+          className="h-56 rounded-md"
+        />
       </div>
 
       <TrustStrip />

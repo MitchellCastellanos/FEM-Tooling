@@ -5,6 +5,7 @@ import { site } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Contacto",
   description: "Solicita una cotización a FEM TOOLING. Responde en menos de un minuto.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {

@@ -2,6 +2,12 @@
 
 Referencia: `docs/Propuesta_FEM_Tooling.pdf` (lo que ve el cliente) y el artefacto interno "Plan FEM Tooling" (auditoría, arquitectura y cotización completas).
 
+## -1. Imágenes temporales con IA (mientras llegan las fotos reales del cliente)
+- [x] Código conectado: `next/image` ya está cableado a 14 rutas fijas en `public/images/` (ver `src/lib/content.ts`)
+- [x] Documento de prompts listo: `docs/PROMPTS_IMAGENES_IA.md`
+- [ ] Generar las 14 imágenes con una IA de imágenes y guardarlas con el nombre exacto de cada prompt
+- [ ] Decidir, ya en vivo, si estas fotos de IA se quedan o se reemplazan por fotografía real (mejor para credibilidad B2B)
+
 ## 0. Base del proyecto
 - [x] Elegir y confirmar stack (Next.js) y hosting (Vercel, ya importado desde GitHub)
 - [x] Inicializar el proyecto en este repo (Next.js + TypeScript + Tailwind, build y lint limpios)
@@ -54,9 +60,9 @@ certificaciones) — ver comentarios `TODO` en el código._
 ## 5. SEO técnico
 - [x] Un solo H1 por página, metadatos únicos por ruta, todo en español consistente
 - [x] Sitemap.xml y robots.txt generados automáticamente
-- [ ] Canonical explícito por página (rápido de agregar, no depende del cliente)
-- [ ] Datos estructurados (Organization/LocalBusiness, Service) — no depende del cliente
-- [ ] Imágenes optimizadas (WebP/AVIF) con alt text real — depende de que lleguen las fotos (Fase 1)
+- [x] Canonical explícito en las 7 páginas
+- [x] Datos estructurados: LocalBusiness (todo el sitio) + Service (Servicios)
+- [ ] Imágenes optimizadas con alt text real — el código ya usa `next/image` (WebP/AVIF automático); solo faltan los archivos (ver punto siguiente)
 
 ## 6. QA
 - [ ] Pruebas responsivas (celular, tablet, escritorio)

@@ -2,7 +2,7 @@ import { CtaButton } from "@/components/CtaButton";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
-import { services, site } from "@/lib/content";
+import { images, services, site } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -28,7 +28,12 @@ export default function Home() {
               </CtaButton>
             </div>
           </div>
-          <PhotoPlaceholder label="Foto real de planta / proceso pendiente" className="h-64 md:h-80 rounded-md" />
+          <PhotoPlaceholder
+            label="Foto real de planta / proceso pendiente"
+            src={images.heroInicio}
+            alt="Taller de FEM TOOLING trabajando un herramental"
+            className="h-64 md:h-80 rounded-md"
+          />
         </div>
       </section>
 
@@ -41,7 +46,12 @@ export default function Home() {
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.slice(0, 3).map((service) => (
-            <ServiceCard key={service.slug} title={service.title} summary={service.summary} />
+            <ServiceCard
+              key={service.slug}
+              title={service.title}
+              summary={service.summary}
+              image={service.image}
+            />
           ))}
         </div>
         <div className="mt-8">
@@ -53,7 +63,12 @@ export default function Home() {
 
       <section className="bg-surface border-y border-line">
         <div className="mx-auto max-w-6xl px-5 py-16 grid md:grid-cols-2 gap-10 items-center">
-          <PhotoPlaceholder label="Foto de proyecto destacado pendiente" className="h-56 rounded-md" />
+          <PhotoPlaceholder
+            label="Foto de proyecto destacado pendiente"
+            src={images.proyectos[0]}
+            alt="Proyecto destacado de FEM TOOLING"
+            className="h-56 rounded-md"
+          />
           <div>
             <h2 className="font-heading font-bold text-2xl md:text-3xl">Proyectos con resultado, no solo fotos</h2>
             <p className="mt-3 text-muted leading-relaxed">

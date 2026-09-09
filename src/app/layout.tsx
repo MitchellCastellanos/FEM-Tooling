@@ -26,6 +26,27 @@ export const metadata: Metadata = {
   },
   description:
     "Diseño, manufactura, instalación y mantenimiento de herramentales industriales en Querétaro, con capacidades de medición 3D.",
+  alternates: { canonical: "/" },
+};
+
+// Datos estructurados básicos de la empresa. Ver docs/PROMPTS_IMAGENES_IA.md
+// y CHECKLIST.md — el logo real y el sameAs (redes sociales) siguen pendientes.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: site.name,
+  description:
+    "Diseño, manufactura, instalación y mantenimiento de herramentales industriales, con capacidades de medición 3D.",
+  url: site.siteUrl,
+  telephone: site.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address,
+    addressLocality: "El Marqués",
+    addressRegion: "Querétaro",
+    addressCountry: "MX",
+  },
+  foundingDate: String(site.since),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -35,6 +56,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${heading.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
