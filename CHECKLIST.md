@@ -10,11 +10,13 @@ Referencia: `docs/Propuesta_FEM_Tooling.pdf` (lo que ve el cliente) y el artefac
 ## 1. Assets (todo lo visual/de marca pendiente, junto en un solo punto)
 - [x] Código listo para recibir imágenes: `next/image` cableado a 14 rutas fijas en `public/images/` (`src/lib/content.ts`)
 - [x] Documento de prompts de IA listo: `docs/PROMPTS_IMAGENES_IA.md`
-- [ ] Generar las 14 imágenes de IA y colocarlas en `public/images/` (temporal, mientras llega material real)
+- [x] Las 14 imágenes de IA generadas y colocadas en `public/images/` (temporal, mientras llega material real)
 - [ ] **Bloqueante (cliente):** logo real en alta resolución (hoy es texto "FEM TOOLING")
 - [ ] **Bloqueante (cliente):** fotos reales en alta resolución (planta, servicios, proyectos) para reemplazar las de IA
 - [ ] **Bloqueante (cliente):** 3–6 casos de proyectos reales (qué se hizo, para qué pieza, qué resultado)
-- [ ] **Bloqueante (cliente):** certificaciones (AS9100/ISO), si existen, con documento de respaldo
+- [x] Certificación ISO 9001:2015 recibida y publicada en `/calidad` (STAREGISTER, vigente
+  hasta 21 jun. 2027). **Falta:** confirmar con el cliente la dirección de planta — el
+  certificado da una distinta a la que se usa en Contacto/Footer (ver nota en `content.ts`)
 
 ## 2. Contenido base (texto/decisiones, sin imágenes)
 

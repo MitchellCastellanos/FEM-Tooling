@@ -1,10 +1,11 @@
-import { site } from "@/lib/content";
+import { quality, site } from "@/lib/content";
 
 const items = [
   `Desde ${site.since}`,
   site.city,
   "Instalación y puesta a punto en sitio",
   "Medición 3D: laser tracker y brazo de 7 ejes",
+  ...quality.certifications.map((cert) => `Certificado ${cert.standard}`),
 ];
 
 export function TrustStrip() {

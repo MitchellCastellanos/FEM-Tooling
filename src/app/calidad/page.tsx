@@ -36,11 +36,38 @@ export default function CalidadPage() {
         </ul>
       </div>
 
-      <div className="mt-10 border border-dashed border-line p-6 text-sm text-muted">
-        {/* TODO (Fase 1, bloqueante): agregar aquí certificaciones (AS9100/ISO) solo
-            si el cliente entrega el documento vigente. No se publica ninguna sin evidencia. */}
-        Certificaciones: pendientes de confirmación por el cliente. Ninguna certificación se
-        publica sin el documento vigente correspondiente.
+      <div className="mt-10">
+        <h2 className="font-heading font-bold text-lg">Certificaciones</h2>
+        <div className="mt-4 flex flex-col gap-4">
+          {quality.certifications.map((cert) => (
+            <div key={cert.certificateNumber} className="border border-line bg-surface p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <p className="font-heading font-bold text-xl text-navy">{cert.standard}</p>
+                <span className="rounded-full bg-good-soft px-3 py-1 text-xs font-medium text-good">
+                  Vigente hasta {cert.expiryDate}
+                </span>
+              </div>
+              <p className="mt-1 text-sm text-muted">{cert.title}</p>
+              <p className="mt-4 text-sm leading-relaxed">
+                <span className="font-medium">Alcance certificado:</span> {cert.scope}
+              </p>
+              <dl className="mt-4 grid gap-2 sm:grid-cols-3 text-xs text-muted">
+                <div>
+                  <dt className="uppercase tracking-wide">Certificado por</dt>
+                  <dd className="mt-0.5 text-ink">{cert.certifyingBody}</dd>
+                </div>
+                <div>
+                  <dt className="uppercase tracking-wide">No. de certificado</dt>
+                  <dd className="mt-0.5 text-ink">{cert.certificateNumber}</dd>
+                </div>
+                <div>
+                  <dt className="uppercase tracking-wide">Certificación inicial</dt>
+                  <dd className="mt-0.5 text-ink">{cert.initialCertification}</dd>
+                </div>
+              </dl>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

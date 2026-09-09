@@ -3,10 +3,17 @@
 
 export const site = {
   name: "FEM TOOLING",
+  // Razón social tal como aparece en el certificado ISO 9001:2015 (STAREGISTER,
+  // 9 sept. 2026).
+  legalName: "FEM Diseño y Manufactura de Herramentales S.A. de C.V.",
   legalScope: "Diseño, manufactura, instalación y mantenimiento de herramentales",
   since: 2018,
   city: "El Marqués, Querétaro",
   address: "Carretera Estatal 500 Km 8.3, El Marqués, Querétaro",
+  // NOTA: el certificado ISO 9001:2015 da una dirección distinta ("Carretera 500,
+  // Querétaro, KM 2 Querétaro-Querétaro, Colorado, 76249, Querétaro de Arteaga") —
+  // probablemente la misma planta descrita distinto, pero hay que confirmarlo con
+  // el cliente antes de publicar una sola versión definitiva.
   // TEMPORAL: número de GABAN Solutions mientras Mitchell confirma cuál de los
   // dos teléfonos de FEM TOOLING es el vigente. Reemplazar por el real del
   // cliente en la entrega — agrupado con la migración en CHECKLIST.md.
@@ -105,8 +112,20 @@ export const quality = {
   vision:
     "Ser una empresa líder en diseño y manufactura de herramentales, reconocida por la calidad y confiabilidad de su trabajo.",
   values: ["Honestidad", "Respeto", "Trabajo en equipo"],
-  // TODO: agregar certificaciones (AS9100/ISO) solo si el cliente entrega el documento vigente.
-  certifications: [] as { name: string; validUntil?: string }[],
+  // Certificación real entregada por Mitchell el 9 sept. 2026 (certificado
+  // STAREGISTER Nr. 24MS210601). No se muestra el escaneo del certificado en el
+  // sitio porque no se subió el archivo de imagen al repo — solo los datos.
+  certifications: [
+    {
+      standard: "ISO 9001:2015",
+      title: "Quality Management System – Requirements",
+      scope: "Diseño, manufactura, instalación y mantenimiento de maquinaria.",
+      certifyingBody: "STAREGISTER International Inc.",
+      certificateNumber: "24MS210601",
+      initialCertification: "21 de junio de 2024",
+      expiryDate: "21 de junio de 2027",
+    },
+  ],
 };
 
 // Aviso de privacidad tal cual lo entregó Mitchell (9 sept. 2026), con un solo

@@ -10,6 +10,8 @@
   --color-navy-dark: #0f1f3b;
   --color-teal: #1c6e75;
   --color-teal-dark: #12494e;
+  --color-good: #3c6e52;
+  --color-good-soft: #e1eee3;
 }
 
 @theme inline {
@@ -22,6 +24,8 @@
   --color-navy-dark: var(--color-navy-dark);
   --color-teal: var(--color-teal);
   --color-teal-dark: var(--color-teal-dark);
+  --color-good: var(--color-good);
+  --color-good-soft: var(--color-good-soft);
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
 }

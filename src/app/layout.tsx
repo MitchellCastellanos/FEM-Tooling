@@ -36,6 +36,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: site.name,
+  legalName: site.legalName,
   description:
     "Diseño, manufactura, instalación y mantenimiento de herramentales industriales, con capacidades de medición 3D.",
   url: site.siteUrl,
