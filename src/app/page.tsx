@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { CtaButton } from "@/components/CtaButton";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -7,33 +9,82 @@ import { images, services, site } from "@/lib/content";
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy text-white">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-[#7fd4d9] text-sm font-semibold uppercase tracking-wide">
-              Diseño, manufactura, instalación y mantenimiento de herramentales
-            </p>
-            <h1 className="mt-4 font-heading font-extrabold text-4xl md:text-5xl leading-[1.05]">
-              Herramentales de precisión, puestos a punto en tus instalaciones
-            </h1>
-            <p className="mt-5 text-white/80 max-w-lg leading-relaxed">
-              Desde {site.since}, diseñamos y fabricamos herramentales industriales en{" "}
-              {site.city}, con capacidades propias de medición 3D (laser tracker, brazo de 7 ejes
-              y escáner) para entregar piezas ajustadas donde tú las necesitas.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <CtaButton href="/contacto">Solicitar cotización</CtaButton>
-              <CtaButton href="/servicios" variant="secondary">
-                Ver capacidades
-              </CtaButton>
-            </div>
+      {/* Hero — "hoja de medición": en vez de una foto grande, una hoja
+          técnica (rejilla de puntos + coordenadas) como la de un software de
+          brazo de medición. La foto real entra chica, como ficha de detalle
+          con línea líder, no como fondo. */}
+      <section
+        className="relative overflow-hidden bg-navy-dark text-white"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, rgba(255,255,255,.08) 1px, transparent 1.4px)",
+          backgroundSize: "24px 24px",
+        }}
+      >
+        <div className="mx-auto max-w-6xl px-5 pb-20 pt-8 md:pb-28 md:pt-10">
+          <div className="flex flex-wrap items-start justify-between gap-4 font-mono text-[11px] text-white/50">
+            <span className="tracking-[0.08em]">FEM-TL-001 / HOJA DE PROCESO</span>
+            <span className="text-right leading-relaxed">
+              X <b className="text-[#ff9a5c]">128.402</b>
+              <br />
+              Y <b className="text-[#ff9a5c]">44.117</b>
+              <br />
+              Z <b className="text-[#ff9a5c]">-6.030</b>
+            </span>
           </div>
-          <PhotoPlaceholder
-            label="Foto real de planta / proceso pendiente"
-            src={images.heroInicio}
-            alt="Taller de FEM TOOLING trabajando un herramental"
-            className="h-64 md:h-80 rounded-md"
-          />
+
+          <div className="mt-14 grid gap-10 md:grid-cols-[1.2fr_auto] md:items-end">
+            <div className="max-w-xl">
+              <p className="font-mono text-xs tracking-[0.08em] text-[#8fd9de]">
+                {"// tolerancia real, no de catálogo"}
+              </p>
+              <h1 className="mt-3 border-b-2 border-dashed border-white/30 pb-5 font-heading font-extrabold text-3xl leading-[1.1] md:text-4xl">
+                Herramentales verificados al milésimo, en tu planta.
+              </h1>
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-white/65 md:text-base">
+                Laser tracker, brazo de medición de 7 ejes y escáner 3D propios: cada pieza se
+                entrega con el dato de medición, no solo con el certificado. Desde {site.since},
+                diseñamos y fabricamos herramentales industriales en {site.city}.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <CtaButton href="/contacto">Solicitar cotización</CtaButton>
+                <Link
+                  href="/servicios"
+                  className="inline-flex items-center justify-center rounded-md border border-white/35 px-6 py-3 text-base font-semibold text-white transition-colors hover:border-white/70"
+                >
+                  Ver equipo de medición
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative hidden md:block">
+              <div className="absolute -left-[92px] bottom-[148px] h-px w-[90px] origin-right -rotate-[14deg] bg-white/40">
+                <span className="absolute -right-[3px] -top-[3px] h-1.5 w-1.5 rounded-full bg-[#ff9a5c]" />
+              </div>
+              <div className="w-[230px] overflow-hidden rounded-lg bg-surface text-ink shadow-2xl">
+                <div className="relative h-[130px]">
+                  <Image
+                    src={images.proyectos[2]}
+                    alt="Medición de un herramental con brazo de 7 ejes"
+                    fill
+                    sizes="230px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="px-3 py-2.5 font-mono text-[10.5px]">
+                  <div className="text-muted">DETALLE — medición en sitio</div>
+                  <div className="font-semibold text-[#d9530f]">±0.05 mm</div>
+                </div>
+              </div>
+            </div>
+
+            <PhotoPlaceholder
+              label="Medición de un herramental con brazo de 7 ejes"
+              src={images.proyectos[2]}
+              alt="Medición de un herramental con brazo de 7 ejes"
+              className="h-48 rounded-lg md:hidden"
+            />
+          </div>
         </div>
       </section>
 
