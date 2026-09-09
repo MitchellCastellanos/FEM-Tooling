@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@/components/Analytics";
 import { site } from "@/lib/content";
 
 const heading = Archivo({
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <WhatsAppButton />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

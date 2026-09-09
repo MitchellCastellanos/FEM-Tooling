@@ -2,81 +2,78 @@
 
 Referencia: `docs/Propuesta_FEM_Tooling.pdf` (lo que ve el cliente) y el artefacto interno "Plan FEM Tooling" (auditoría, arquitectura y cotización completas).
 
-## -1. Imágenes temporales con IA (mientras llegan las fotos reales del cliente)
-- [x] Código conectado: `next/image` ya está cableado a 14 rutas fijas en `public/images/` (ver `src/lib/content.ts`)
-- [x] Documento de prompts listo: `docs/PROMPTS_IMAGENES_IA.md`
-- [ ] Generar las 14 imágenes con una IA de imágenes y guardarlas con el nombre exacto de cada prompt
-- [ ] Decidir, ya en vivo, si estas fotos de IA se quedan o se reemplazan por fotografía real (mejor para credibilidad B2B)
-
 ## 0. Base del proyecto
 - [x] Elegir y confirmar stack (Next.js) y hosting (Vercel, ya importado desde GitHub)
 - [x] Inicializar el proyecto en este repo (Next.js + TypeScript + Tailwind, build y lint limpios)
-- [x] Tokens de marca iniciales: navy + teal, tipografía Archivo/Inter — falta el logo real en alta resolución (hoy es texto "FEM TOOLING")
+- [x] Tokens de marca iniciales: navy + teal, tipografía Archivo/Inter
 
-## 1. Contenido base (bloqueante para diseño real)
+## 1. Assets (todo lo visual/de marca pendiente, junto en un solo punto)
+- [x] Código listo para recibir imágenes: `next/image` cableado a 14 rutas fijas en `public/images/` (`src/lib/content.ts`) — en cuanto el archivo exista con el nombre correcto, aparece solo, sin tocar código
+- [x] Documento de prompts de IA listo: `docs/PROMPTS_IMAGENES_IA.md`
+- [ ] Generar las 14 imágenes de IA y colocarlas en `public/images/` (temporal, mientras llega material real)
+- [ ] **Bloqueante (cliente):** logo real en alta resolución (hoy es texto "FEM TOOLING")
+- [ ] **Bloqueante (cliente):** fotos reales en alta resolución (planta, servicios, proyectos) para reemplazar las de IA
+- [ ] **Bloqueante (cliente):** 3–6 casos de proyectos reales (qué se hizo, para qué pieza, qué resultado)
+- [ ] **Bloqueante (cliente):** certificaciones (AS9100/ISO), si existen, con documento de respaldo
 
-**Zona gris — Mitchell lo resuelve directamente, sin pasar por el cliente todavía:**
+## 2. Contenido base (texto/decisiones, sin imágenes)
+
+**Zona gris — Mitchell lo resuelve directamente:**
 - [ ] Teléfono/WhatsApp correcto — Mitchell lo está confirmando (Google/Facebook/llamando)
-- [ ] Correo de GABAN para pruebas del formulario — falta que Mitchell lo comparta para conectar el envío real (ver sección 4)
-- Analytics: se decidió **esperar** el acceso al GA4 existente del cliente (`G-BF2FDR6KMM`) en vez de crear uno nuevo — no crear nada aparte.
 
 **Bloqueante — solo lo puede responder FEM TOOLING:**
-- [ ] Reunir fotos en alta resolución (servicios, planta, proyectos)
-- [ ] Redactar/curar texto de Servicios, Empresa y 3–6 casos de Proyectos
-- [ ] Confirmar certificaciones (si existen) con documento de respaldo
+- [ ] Redactar/curar texto técnico de Servicios y Empresa
 - [ ] Decidir si se mantiene, simplifica o elimina la venta de piezas sueltas
 - [ ] Cobertura geográfica real (Querétaro / Bajío / nacional / internacional)
-- [ ] Aprobar/redactar el aviso de privacidad (o su asesor legal)
 
-_Confirmado con Mitchell: ninguna de las de arriba se sabía de antemano — las 4 quedan
-como preguntas directas para FEM TOOLING cuando se agende la sesión de descubrimiento._
+**Resuelto:**
+- [x] Aviso de privacidad — texto real recibido y publicado (9 sept. 2026). **Ojo:** trae dos
+  inconsistencias que hay que aclarar con el cliente antes de lanzar — el correo de
+  contacto ARCO es `contacto@cncmaquinados.com` (dominio de otra empresa, no
+  femtooling.com — parece aviso reciclado sin actualizar) y el teléfono/horario ahí
+  (+52 442 779 6991, 8am–5pm) no coincide con el de Contacto (+52 442 261 5052, 8am–4pm).
+  Ver comentario en `src/lib/content.ts`.
 
-## 2. Componentes compartidos
+## 3. Componentes compartidos
 - [x] Header + navegación (con CTA de cotización)
+- [x] Menú móvil (hamburguesa) — el QA detectó que faltaba y ya se corrigió
 - [x] Footer (datos de contacto, año dinámico, enlaces legales)
 - [x] Botón flotante de WhatsApp
-- [x] Banner de consentimiento de cookies (aceptar/rechazar, sin analytics conectado aún)
+- [x] Banner de consentimiento de cookies (aceptar/rechazar)
 - [x] Botón/CTA de cotización reutilizable
 
-## 3. Páginas
-_Todas construidas con contenido real donde ya existía (política de calidad, servicios,
-dirección) y placeholders visibles donde falta contenido del cliente (fotos, proyectos,
-certificaciones) — ver comentarios `TODO` en el código._
-- [x] Inicio
-- [x] Servicios y capacidades
-- [x] Proyectos (placeholders — faltan los 3–6 casos reales, bloqueante de Fase 1)
-- [x] Calidad
-- [x] Empresa
-- [x] Contacto (formulario + carga de archivo funcionando en la UI)
-- [x] Aviso de privacidad (placeholder — texto final lo aprueba el cliente/asesor)
+## 4. Páginas
+_Todas construidas con contenido real donde ya existía y placeholders donde falta
+contenido del cliente — ver sección 1 y 2._
+- [x] Inicio · Servicios · Proyectos · Calidad · Empresa · Contacto · Aviso de privacidad
 
-## 4. Funcionalidad
-- [x] Formulario de cotización con adjuntos — UI lista, guarda en consola
-- [x] Conectar Resend para el envío real, usando `hello@gabansolutions.ca` (dominio ya verificado en la cuenta de Resend de Mitchell)
-- [ ] **Pendiente para operación** (no bloquea seguir construyendo): agregar `RESEND_API_KEY` en Vercel antes de lanzar — sin ella el formulario responde error 500 en vez de fallar en silencio
-- [ ] Panel de indicadores (reporte simple sobre Analytics)
-- [ ] Conectar Google Analytics: **en espera** del acceso del cliente a `G-BF2FDR6KMM` (decisión tomada: no crear una propiedad nueva aparte)
+## 5. Funcionalidad
+- [x] Formulario de cotización con adjuntos, conectado a Resend (`hello@gabansolutions.ca`)
+- [ ] **Pendiente para operación:** agregar `RESEND_API_KEY` en Vercel antes de lanzar
+- [x] Analytics cableado (componente `Analytics`, respeta el consentimiento de cookies) — **en espera** de decidir/tener un `NEXT_PUBLIC_GA_MEASUREMENT_ID` (el del cliente `G-BF2FDR6KMM` cuando dé acceso, o uno nuevo de GABAN)
+- [ ] Panel de indicadores (reporte curado sobre esos datos) — depende de lo anterior
 
-## 5. SEO técnico
-- [x] Un solo H1 por página, metadatos únicos por ruta, todo en español consistente
-- [x] Sitemap.xml y robots.txt generados automáticamente
-- [x] Canonical explícito en las 7 páginas
-- [x] Datos estructurados: LocalBusiness (todo el sitio) + Service (Servicios)
-- [ ] Imágenes optimizadas con alt text real — el código ya usa `next/image` (WebP/AVIF automático); solo faltan los archivos (ver punto siguiente)
+## 6. SEO técnico
+- [x] Un solo H1 por página, metadatos únicos, canonical en las 7 páginas
+- [x] Sitemap.xml y robots.txt
+- [x] Datos estructurados: LocalBusiness (sitio) + Service (Servicios)
+- [ ] Alt text real en imágenes — depende de que lleguen las fotos (sección 1)
 
-## 6. QA
-- [ ] Pruebas responsivas (celular, tablet, escritorio)
-- [ ] Pruebas cruzadas de navegador
-- [ ] Formulario probado de punta a punta (incluye adjuntos)
-- [ ] Consola sin errores, sin enlaces rotos
+## 7. QA — ya corrido una vez (9 sept. 2026)
+- [x] Las 7 páginas responden 200, sin enlaces internos rotos
+- [x] Sin errores de consola reales (los únicos "error" son 400 esperados por las 14 imágenes que aún no existen)
+- [x] Responsivo revisado en 375/768/1440px — se encontró y corrigió la falta de menú móvil
+- [x] Formulario probado de punta a punta en la UI (falla con error claro sin `RESEND_API_KEY`, como se espera)
+- [ ] Prueba de envío real de correo (necesita la key de producción)
+- [ ] Verificación manual en un navegador real (Safari/Firefox) una vez desplegado en Vercel — este entorno solo tiene Chromium
 
-## 7. Migración y lanzamiento (requiere accesos del cliente)
+## 8. Migración y lanzamiento (requiere accesos del cliente)
 - [ ] Acceso/exportación de Analytics y Search Console actuales
 - [ ] Redirecciones 301 desde las rutas actuales (ver tabla en el plan interno)
 - [ ] Acceso al registrador del dominio (GoDaddy) para el corte final
 - [ ] Verificar sitio nuevo en Search Console + enviar sitemap
 - [ ] Apagar el sitio viejo una vez confirmado el nuevo
 
-## 8. Cierre
+## 9. Cierre
 - [ ] Sesión de capacitación (hasta 2 personas)
 - [ ] Entrar a periodo de soporte de 6 meses
