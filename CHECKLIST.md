@@ -3,9 +3,9 @@
 Referencia: `docs/Propuesta_FEM_Tooling.pdf` (lo que ve el cliente) y el artefacto interno "Plan FEM Tooling" (auditoría, arquitectura y cotización completas).
 
 ## 0. Base del proyecto
-- [ ] Elegir y confirmar stack (Next.js o Astro) y hosting (Vercel/Netlify)
-- [ ] Inicializar el proyecto en este repo (estructura de carpetas, config, lint)
-- [ ] Definir tokens de marca: colores, tipografía, logo en alta resolución
+- [x] Elegir y confirmar stack (Next.js) y hosting (Vercel, ya importado desde GitHub)
+- [x] Inicializar el proyecto en este repo (Next.js + TypeScript + Tailwind, build y lint limpios)
+- [x] Tokens de marca iniciales: navy + teal, tipografía Archivo/Inter — falta el logo real en alta resolución (hoy es texto "FEM TOOLING")
 
 ## 1. Contenido base (bloqueante para diseño real)
 - [ ] Confirmar teléfono/WhatsApp correcto
@@ -16,23 +16,27 @@ Referencia: `docs/Propuesta_FEM_Tooling.pdf` (lo que ve el cliente) y el artefac
 - [ ] Decidir si se mantiene, simplifica o elimina la venta de piezas sueltas
 
 ## 2. Componentes compartidos
-- [ ] Header + navegación (con CTA de cotización)
-- [ ] Footer (datos de contacto consistentes, año dinámico, enlaces legales)
-- [ ] Botón flotante de WhatsApp
-- [ ] Banner de consentimiento de cookies (aceptar/rechazar/configurar)
-- [ ] Botón/CTA de cotización reutilizable
+- [x] Header + navegación (con CTA de cotización)
+- [x] Footer (datos de contacto, año dinámico, enlaces legales)
+- [x] Botón flotante de WhatsApp
+- [x] Banner de consentimiento de cookies (aceptar/rechazar, sin analytics conectado aún)
+- [x] Botón/CTA de cotización reutilizable
 
 ## 3. Páginas
-- [ ] Inicio
-- [ ] Servicios y capacidades
-- [ ] Proyectos (con contexto por caso)
-- [ ] Calidad
-- [ ] Empresa
-- [ ] Contacto (formulario + carga de planos)
-- [ ] Aviso de privacidad (texto final lo aprueba el cliente/asesor)
+_Todas construidas con contenido real donde ya existía (política de calidad, servicios,
+dirección) y placeholders visibles donde falta contenido del cliente (fotos, proyectos,
+certificaciones) — ver comentarios `TODO` en el código._
+- [x] Inicio
+- [x] Servicios y capacidades
+- [x] Proyectos (placeholders — faltan los 3–6 casos reales, bloqueante de Fase 1)
+- [x] Calidad
+- [x] Empresa
+- [x] Contacto (formulario + carga de archivo funcionando en la UI)
+- [x] Aviso de privacidad (placeholder — texto final lo aprueba el cliente/asesor)
 
 ## 4. Funcionalidad
-- [ ] Formulario de cotización con adjuntos + notificación automática por correo
+- [x] Formulario de cotización con adjuntos — UI lista, guarda en consola
+- [ ] **Bloqueante:** conectar proveedor de correo real (Resend/SendGrid) para que el formulario notifique de verdad — hoy es una ruta de prueba (`src/app/api/cotizacion/route.ts`)
 - [ ] Panel de indicadores (reporte simple sobre Analytics)
 - [ ] Conectar Google Analytics existente (`G-BF2FDR6KMM`) si el cliente da acceso
 
