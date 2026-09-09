@@ -36,55 +36,55 @@ export const services = [
     // TODO: ampliar con detalle técnico real (tolerancias, tipo de ensamble, materiales).
     summary:
       "Dispositivos de sujeción y ensamble diseñados y fabricados a la medida de cada componente.",
-    image: "/images/servicios/tooling-aeroespacial.jpg",
+    image: "/images/servicios/tooling-aeroespacial.png",
   },
   {
     slug: "barrenado-corte",
     title: "Dispositivos para barrenado y corte (drilling / trimming)",
     summary:
       "Herramentales de precisión para operaciones de barrenado y corte en línea de producción.",
-    image: "/images/servicios/barrenado-corte.jpg",
+    image: "/images/servicios/barrenado-corte.png",
   },
   {
     slug: "cambios-de-ingenieria",
     title: "Cambios de ingeniería y actualización de fixtures",
     summary:
       "Modificación y puesta al día de herramentales existentes ante cambios de diseño del cliente.",
-    image: "/images/servicios/cambios-de-ingenieria.jpg",
+    image: "/images/servicios/cambios-de-ingenieria.png",
   },
   {
     slug: "volteadores-elevadores",
     title: "Volteadores y elevadores manuales, neumáticos o eléctricos",
     summary:
       "Dispositivos de manejo de piezas adaptados al peso y geometría de cada componente.",
-    image: "/images/servicios/volteadores-elevadores.jpg",
+    image: "/images/servicios/volteadores-elevadores.png",
   },
   {
     slug: "dummies-pruebas-de-fuga",
     title: "Manufactura de dummies para pruebas de fugas",
     summary: "Piezas de prueba fabricadas a especificación para validar sellado y hermeticidad.",
-    image: "/images/servicios/dummies-pruebas-de-fuga.jpg",
+    image: "/images/servicios/dummies-pruebas-de-fuga.png",
   },
   {
     slug: "dispositivos-de-carga",
     title: "Dispositivos de carga",
     summary: "Soluciones a la medida para el manejo y carga segura de piezas en planta.",
-    image: "/images/servicios/dispositivos-de-carga.jpg",
+    image: "/images/servicios/dispositivos-de-carga.png",
   },
 ];
 
 // Imágenes generales del sitio. Ver docs/PROMPTS_IMAGENES_IA.md para el prompt
 // y la ruta exacta donde guardar cada archivo dentro de /public.
 export const images = {
-  heroInicio: "/images/hero-inicio.jpg",
-  empresaEquipo: "/images/empresa-equipo.jpg",
+  heroInicio: "/images/hero-inicio.png",
+  empresaEquipo: "/images/empresa-equipo.png",
   proyectos: [
-    "/images/proyectos/proyecto-01.jpg",
-    "/images/proyectos/proyecto-02.jpg",
-    "/images/proyectos/proyecto-03.jpg",
-    "/images/proyectos/proyecto-04.jpg",
-    "/images/proyectos/proyecto-05.jpg",
-    "/images/proyectos/proyecto-06.jpg",
+    "/images/proyectos/proyecto-01.png",
+    "/images/proyectos/proyecto-02.png",
+    "/images/proyectos/proyecto-03.png",
+    "/images/proyectos/proyecto-04.png",
+    "/images/proyectos/proyecto-05.png",
+    "/images/proyectos/proyecto-06.png",
   ],
 };
 

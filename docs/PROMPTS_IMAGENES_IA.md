@@ -35,33 +35,33 @@ resolución, sin texto ni logotipos visibles, sin personas mostrando el rostro c
 hacia cámara (perfil o de espaldas), composición horizontal 4:3 salvo que se indique lo
 contrario.
 
-IMAGEN 1 — archivo: hero-inicio.jpg (horizontal 16:9)
+IMAGEN 1 — archivo: hero-inicio.png (horizontal 16:9)
 Toma amplia de un centro de maquinado CNC en operación, fabricando un herramental
 metálico grande y complejo, refrigerante visible en la herramienta de corte, un técnico
 de espaldas supervisando el proceso al fondo, sensación de precisión y escala industrial.
 
-IMAGEN 2 — archivo: servicios/tooling-aeroespacial.jpg
+IMAGEN 2 — archivo: servicios/tooling-aeroespacial.png
 Dispositivo de sujeción (fixture) metálico sosteniendo un componente aeroespacial curvo
 de aluminio, clamps de precisión visibles, ambiente de ensamble aeroespacial.
 
-IMAGEN 3 — archivo: servicios/barrenado-corte.jpg
+IMAGEN 3 — archivo: servicios/barrenado-corte.png
 Primer plano de un dispositivo de barrenado guiando una broca de precisión sobre una
 placa metálica, virutas de metal visibles, enfoque en la precisión del corte.
 
-IMAGEN 4 — archivo: servicios/cambios-de-ingenieria.jpg
+IMAGEN 4 — archivo: servicios/cambios-de-ingenieria.png
 Ingeniero ajustando manualmente un herramental metálico existente sobre una mesa de
 trabajo, calibrador digital midiendo una tolerancia, plano técnico de referencia a un
 costado.
 
-IMAGEN 5 — archivo: servicios/volteadores-elevadores.jpg
+IMAGEN 5 — archivo: servicios/volteadores-elevadores.png
 Dispositivo volteador/elevador industrial (manual o neumático) sosteniendo y girando
 una pieza metálica grande, mecanismo visible.
 
-IMAGEN 6 — archivo: servicios/dummies-pruebas-de-fuga.jpg
+IMAGEN 6 — archivo: servicios/dummies-pruebas-de-fuga.png
 Técnico realizando una prueba de fugas sobre una pieza metálica de prueba (dummy),
 manómetro de presión visible, mangueras de prueba conectadas.
 
-IMAGEN 7 — archivo: servicios/dispositivos-de-carga.jpg
+IMAGEN 7 — archivo: servicios/dispositivos-de-carga.png
 Dispositivo de carga moviendo una pieza metálica pesada con ayuda de un polipasto/grúa
 cenital dentro del taller, cadenas o eslingas visibles.
 
@@ -72,13 +72,13 @@ Empieza generando solo la IMAGEN 1 y espera mi "siguiente".
 
 | # | Guardar como |
 | --- | --- |
-| 1 | `public/images/hero-inicio.jpg` |
-| 2 | `public/images/servicios/tooling-aeroespacial.jpg` |
-| 3 | `public/images/servicios/barrenado-corte.jpg` |
-| 4 | `public/images/servicios/cambios-de-ingenieria.jpg` |
-| 5 | `public/images/servicios/volteadores-elevadores.jpg` |
-| 6 | `public/images/servicios/dummies-pruebas-de-fuga.jpg` |
-| 7 | `public/images/servicios/dispositivos-de-carga.jpg` |
+| 1 | `public/images/hero-inicio.png` |
+| 2 | `public/images/servicios/tooling-aeroespacial.png` |
+| 3 | `public/images/servicios/barrenado-corte.png` |
+| 4 | `public/images/servicios/cambios-de-ingenieria.png` |
+| 5 | `public/images/servicios/volteadores-elevadores.png` |
+| 6 | `public/images/servicios/dummies-pruebas-de-fuga.png` |
+| 7 | `public/images/servicios/dispositivos-de-carga.png` |
 
 ---
 
@@ -102,32 +102,32 @@ resolución, sin texto ni logotipos visibles, sin personas mostrando el rostro c
 hacia cámara (perfil o de espaldas), composición horizontal 4:3 salvo que se indique lo
 contrario.
 
-IMAGEN 1 — archivo: empresa-equipo.jpg
+IMAGEN 1 — archivo: empresa-equipo.png
 Tres o cuatro técnicos e ingenieros mexicanos revisando un plano técnico junto a un
 herramental metálico grande sobre una mesa de trabajo, ambiente colaborativo, uniformes
 de trabajo industriales, taller limpio y ordenado al fondo.
 
-IMAGEN 2 — archivo: proyectos/proyecto-01.jpg
+IMAGEN 2 — archivo: proyectos/proyecto-01.png
 Herramental de aluminio terminado sobre una mesa de trabajo, acabado limpio, listo para
 entrega.
 
-IMAGEN 3 — archivo: proyectos/proyecto-02.jpg
+IMAGEN 3 — archivo: proyectos/proyecto-02.png
 Marco/estructura de acero soldada de gran tamaño, cordones de soldadura visibles,
 taller de fondo.
 
-IMAGEN 4 — archivo: proyectos/proyecto-03.jpg
+IMAGEN 4 — archivo: proyectos/proyecto-03.png
 Técnico usando un brazo articulado de medición 3D (tipo FARO) sobre una pieza metálica,
 pantalla del equipo visible.
 
-IMAGEN 5 — archivo: proyectos/proyecto-04.jpg
+IMAGEN 5 — archivo: proyectos/proyecto-04.png
 Varias piezas de herramental terminadas y organizadas en un área de embarque, listas
 para envío.
 
-IMAGEN 6 — archivo: proyectos/proyecto-05.jpg
+IMAGEN 6 — archivo: proyectos/proyecto-05.png
 Primer plano de un bloque de aluminio recién maquinado con acabado de precisión,
 superficie brillante.
 
-IMAGEN 7 — archivo: proyectos/proyecto-06.jpg
+IMAGEN 7 — archivo: proyectos/proyecto-06.png
 Herramental ya instalado dentro de una línea de producción, integrado a una estación
 de trabajo.
 
@@ -138,13 +138,13 @@ Empieza generando solo la IMAGEN 1 y espera mi "siguiente".
 
 | # | Guardar como |
 | --- | --- |
-| 1 | `public/images/empresa-equipo.jpg` |
-| 2 | `public/images/proyectos/proyecto-01.jpg` |
-| 3 | `public/images/proyectos/proyecto-02.jpg` |
-| 4 | `public/images/proyectos/proyecto-03.jpg` |
-| 5 | `public/images/proyectos/proyecto-04.jpg` |
-| 6 | `public/images/proyectos/proyecto-05.jpg` |
-| 7 | `public/images/proyectos/proyecto-06.jpg` |
+| 1 | `public/images/empresa-equipo.png` |
+| 2 | `public/images/proyectos/proyecto-01.png` |
+| 3 | `public/images/proyectos/proyecto-02.png` |
+| 4 | `public/images/proyectos/proyecto-03.png` |
+| 5 | `public/images/proyectos/proyecto-04.png` |
+| 6 | `public/images/proyectos/proyecto-05.png` |
+| 7 | `public/images/proyectos/proyecto-06.png` |
 
 ---
 
