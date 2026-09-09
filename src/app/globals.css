@@ -39,3 +39,29 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   text-wrap: balance;
 }
+
+/* Hero "franja industrial": filmstrip horizontal y ticker de capacidades. */
+@keyframes hero-marquee-strip {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes hero-marquee-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hero-marquee-strip {
+  animation: hero-marquee-strip 36s linear infinite;
+}
+
+.hero-marquee-ticker {
+  animation: hero-marquee-ticker 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee-strip,
+  .hero-marquee-ticker {
+    animation: none;
+  }
+}

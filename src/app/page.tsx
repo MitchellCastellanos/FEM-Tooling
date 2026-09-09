@@ -1,39 +1,66 @@
+import Image from "next/image";
 import { CtaButton } from "@/components/CtaButton";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { images, services, site } from "@/lib/content";
 
+const heroFilmstrip = [
+  { src: images.heroInicio, alt: "Maquinado de un herramental en el taller de FEM TOOLING" },
+  { src: images.proyectos[2], alt: "Medición de un herramental con brazo de 7 ejes" },
+  { src: services[0].image, alt: "Fixture de ensamble aeroespacial fabricado por FEM TOOLING" },
+  { src: images.proyectos[0], alt: "Molde de precisión terminado en FEM TOOLING" },
+];
+
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy text-white">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-[#7fd4d9] text-sm font-semibold uppercase tracking-wide">
-              Diseño, manufactura, instalación y mantenimiento de herramentales
+      {/* Hero — "franja industrial": una tira horizontal de fotos del taller
+          se mueve como banda transportadora; encima, un panel fijo con el
+          titular, y abajo, un ticker con las capacidades del taller. */}
+      <section className="relative overflow-hidden bg-navy-dark text-white">
+        <div className="relative h-[320px] overflow-hidden md:h-[380px]">
+          <div className="hero-marquee-strip flex h-full w-max">
+            {[...heroFilmstrip, ...heroFilmstrip].map((photo, i) => (
+              <div key={i} className="relative h-full w-[260px] shrink-0 md:w-[340px]">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="340px"
+                  className="object-cover grayscale contrast-125"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute left-5 right-5 top-6 max-w-lg rounded-xl border border-white/15 bg-navy-dark/65 p-5 backdrop-blur-sm md:left-8 md:top-8 md:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#8fd9de]">
+              Taller propio · {site.city}
             </p>
-            <h1 className="mt-4 font-heading font-extrabold text-4xl md:text-5xl leading-[1.05]">
-              Herramentales de precisión, puestos a punto en tus instalaciones
+            <h1 className="mt-2.5 font-heading font-extrabold text-2xl leading-tight md:text-3xl">
+              Un taller que se mueve contigo.
             </h1>
-            <p className="mt-5 text-white/80 max-w-lg leading-relaxed">
-              Desde {site.since}, diseñamos y fabricamos herramentales industriales en{" "}
-              {site.city}, con capacidades propias de medición 3D (laser tracker, brazo de 7 ejes
-              y escáner) para entregar piezas ajustadas donde tú las necesitas.
+            <p className="mt-3 text-sm leading-relaxed text-white/70">
+              Diseño, manufactura, instalación y mantenimiento de herramentales — todo bajo un
+              mismo techo, desde {site.since}.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-4">
               <CtaButton href="/contacto">Solicitar cotización</CtaButton>
-              <CtaButton href="/servicios" variant="secondary">
-                Ver capacidades
-              </CtaButton>
             </div>
           </div>
-          <PhotoPlaceholder
-            label="Foto real de planta / proceso pendiente"
-            src={images.heroInicio}
-            alt="Taller de FEM TOOLING trabajando un herramental"
-            className="h-64 md:h-80 rounded-md"
-          />
+        </div>
+
+        <div className="flex items-center overflow-hidden border-t border-white/10 py-3">
+          <div className="hero-marquee-ticker flex w-max gap-10 whitespace-nowrap font-mono text-xs tracking-[0.05em] text-white/55">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <span key={i}>
+                <b className="text-[#ff9a5c]">LASER TRACKER</b> · BRAZO DE 7 EJES · ESCÁNER 3D ·
+                DESDE {site.since} · {site.city.toUpperCase()} · <b className="text-[#ff9a5c]">LASER TRACKER</b> ·
+                BRAZO DE 7 EJES · ESCÁNER 3D · DESDE {site.since} · {site.city.toUpperCase()} ·
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
