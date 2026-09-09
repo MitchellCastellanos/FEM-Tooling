@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { nav, site } from "@/lib/content";
 
@@ -26,6 +27,25 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/50">
         © {new Date().getFullYear()} {site.name} — Todos los derechos reservados.
+      </div>
+
+      <div className="border-t border-white/5 py-4 flex items-center justify-center gap-2">
+        <a
+          href="https://gabansolutions.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-xs text-white/50 hover:text-white transition-colors"
+        >
+          <span>Sitio web creado por</span>
+          <Image
+            src="/images/gaban-logo.png"
+            alt="GABAN Solutions"
+            width={22}
+            height={22}
+            className="object-contain"
+          />
+          <span className="font-medium text-white/70">GABAN Solutions</span>
+        </a>
       </div>
     </footer>
   );
