@@ -35,3 +35,50 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   text-wrap: balance;
 }
+
+/* Hero "placa cortada": split diagonal tipo lámina cortada con láser. */
+.hero-cut-photo {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(58% 0, 100% 0, 100% 100%, 78% 100%);
+}
+
+.hero-cut-text {
+  position: absolute;
+  inset: 0;
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
+}
+
+.hero-cut-seam {
+  position: absolute;
+  inset-block: 0;
+  left: calc(58% - 2px);
+  width: 4px;
+  background: linear-gradient(180deg, transparent, #ff9a5c 15%, #ffb27a 50%, #ff9a5c 85%, transparent);
+  transform: skewX(-8.5deg);
+  transform-origin: top;
+  opacity: 0.85;
+}
+
+.hero-cut-btn {
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
+
+@media (max-width: 640px) {
+  .hero-cut-text {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+  }
+
+  .hero-cut-photo {
+    clip-path: polygon(0 78%, 100% 58%, 100% 100%, 0 100%);
+  }
+
+  .hero-cut-seam {
+    display: none;
+  }
+}
