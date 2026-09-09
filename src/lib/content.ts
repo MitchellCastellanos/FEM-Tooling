@@ -113,8 +113,7 @@ export const quality = {
     "Ser una empresa líder en diseño y manufactura de herramentales, reconocida por la calidad y confiabilidad de su trabajo.",
   values: ["Honestidad", "Respeto", "Trabajo en equipo"],
   // Certificación real entregada por Mitchell el 9 sept. 2026 (certificado
-  // STAREGISTER Nr. 24MS210601). No se muestra el escaneo del certificado en el
-  // sitio porque no se subió el archivo de imagen al repo — solo los datos.
+  // STAREGISTER Nr. 24MS210601). El escaneo original está en documentFile.
   certifications: [
     {
       standard: "ISO 9001:2015",
@@ -124,6 +123,7 @@ export const quality = {
       certificateNumber: "24MS210601",
       initialCertification: "21 de junio de 2024",
       expiryDate: "21 de junio de 2027",
+      documentFile: "/documents/certificado-iso-9001-2015.jpg",
     },
   ],
 };

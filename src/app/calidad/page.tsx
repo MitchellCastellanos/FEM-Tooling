@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { quality } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -65,6 +66,32 @@ export default function CalidadPage() {
                   <dd className="mt-0.5 text-ink">{cert.initialCertification}</dd>
                 </div>
               </dl>
+              {cert.documentFile && (
+                <div className="mt-5 flex items-center gap-4 border-t border-line pt-5">
+                  <a
+                    href={cert.documentFile}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 overflow-hidden rounded border border-line"
+                  >
+                    <Image
+                      src={cert.documentFile}
+                      alt={`Certificado ${cert.standard} de ${cert.certifyingBody}`}
+                      width={90}
+                      height={127}
+                      className="object-cover"
+                    />
+                  </a>
+                  <a
+                    href={cert.documentFile}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-teal underline underline-offset-2"
+                  >
+                    Ver certificado completo
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
