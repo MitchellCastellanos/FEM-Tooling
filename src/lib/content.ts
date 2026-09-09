@@ -11,9 +11,8 @@ export const site = {
   phone: "+52 442 261 5052",
   // Depende del teléfono de arriba — confirmar junto con él si recibe WhatsApp.
   whatsappNumber: "5214422615052",
-  // TODO: correo de GABAN para pruebas mientras se confirma el correo real del cliente
-  // (pendiente de que Mitchell lo comparta) — ver CHECKLIST.md, sección "Zona gris".
-  quoteEmail: "contacto@femtooling.com",
+  // Correo de GABAN mientras se confirma el correo comercial real del cliente.
+  quoteEmail: "hello@gabansolutions.ca",
   hours: "Lunes a viernes, 8:00 a.m. a 4:00 p.m.",
   siteUrl: "https://femtooling.com",
 };
