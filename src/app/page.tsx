@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CtaButton } from "@/components/CtaButton";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -7,33 +8,39 @@ import { images, services, site } from "@/lib/content";
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy text-white">
-        <div className="mx-auto max-w-6xl px-5 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-[#7fd4d9] text-sm font-semibold uppercase tracking-wide">
-              Diseño, manufactura, instalación y mantenimiento de herramentales
-            </p>
-            <h1 className="mt-4 font-heading font-extrabold text-4xl md:text-5xl leading-[1.05]">
-              Herramentales de precisión, puestos a punto en tus instalaciones
-            </h1>
-            <p className="mt-5 text-white/80 max-w-lg leading-relaxed">
-              Desde {site.since}, diseñamos y fabricamos herramentales industriales en{" "}
-              {site.city}, con capacidades propias de medición 3D (laser tracker, brazo de 7 ejes
-              y escáner) para entregar piezas ajustadas donde tú las necesitas.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <CtaButton href="/contacto">Solicitar cotización</CtaButton>
-              <CtaButton href="/servicios" variant="secondary">
-                Ver capacidades
-              </CtaButton>
-            </div>
+      {/* Hero — "título monumental": una sola foto a pantalla completa, sin
+          columnas, con el titular a escala de cartel encima. Sin párrafo
+          largo aquí a propósito; la descripción vive en la franja de abajo. */}
+      <section className="relative flex h-[78vh] min-h-[560px] flex-col justify-between overflow-hidden bg-navy-dark text-white md:h-[88vh] md:min-h-[600px]">
+        <Image
+          src={services[0].image}
+          alt="Fixture de ensamble aeroespacial fabricado por FEM TOOLING"
+          fill
+          preload
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/95 via-navy-dark/25 to-navy-dark/10" />
+
+        <div className="relative mx-auto flex w-full max-w-6xl items-start justify-between px-5 pt-7 font-mono text-[11px] tracking-[0.05em] text-white/70">
+          <span>FEM TOOLING</span>
+          <span>
+            DESDE {site.since} · {site.city.toUpperCase()}
+          </span>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-6xl px-5 pb-12 md:pb-16">
+          <h1 className="font-heading font-extrabold uppercase leading-[0.95] text-white text-[clamp(2.6rem,8vw,5.2rem)]">
+            Precisión
+            <br />
+            que se instala.
+          </h1>
+          <div className="mt-7 flex flex-wrap items-end justify-between gap-6">
+            <CtaButton href="/contacto">Solicitar cotización →</CtaButton>
+            <span className="font-mono text-[10px] tracking-[0.08em] text-white/60">
+              ↓ desplázate
+            </span>
           </div>
-          <PhotoPlaceholder
-            label="Foto real de planta / proceso pendiente"
-            src={images.heroInicio}
-            alt="Taller de FEM TOOLING trabajando un herramental"
-            className="h-64 md:h-80 rounded-md"
-          />
         </div>
       </section>
 
