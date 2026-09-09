@@ -47,15 +47,16 @@ certificaciones) — ver comentarios `TODO` en el código._
 ## 4. Funcionalidad
 - [x] Formulario de cotización con adjuntos — UI lista, guarda en consola
 - [x] Conectar Resend para el envío real, usando `hello@gabansolutions.ca` (dominio ya verificado en la cuenta de Resend de Mitchell)
-- [ ] **Falta:** agregar la variable de entorno `RESEND_API_KEY` en Vercel (Project Settings → Environment Variables) para que funcione en producción; sin ella el formulario responde error 500 en vez de fallar en silencio
+- [ ] **Pendiente para operación** (no bloquea seguir construyendo): agregar `RESEND_API_KEY` en Vercel antes de lanzar — sin ella el formulario responde error 500 en vez de fallar en silencio
 - [ ] Panel de indicadores (reporte simple sobre Analytics)
 - [ ] Conectar Google Analytics: **en espera** del acceso del cliente a `G-BF2FDR6KMM` (decisión tomada: no crear una propiedad nueva aparte)
 
 ## 5. SEO técnico
-- [ ] Un solo H1 por página, metadatos únicos, sin mezcla de idiomas sin criterio
-- [ ] Sitemap.xml, robots.txt, canonical correcto
-- [ ] Datos estructurados (Organization/LocalBusiness, Service)
-- [ ] Imágenes optimizadas (WebP/AVIF) con alt text real
+- [x] Un solo H1 por página, metadatos únicos por ruta, todo en español consistente
+- [x] Sitemap.xml y robots.txt generados automáticamente
+- [ ] Canonical explícito por página (rápido de agregar, no depende del cliente)
+- [ ] Datos estructurados (Organization/LocalBusiness, Service) — no depende del cliente
+- [ ] Imágenes optimizadas (WebP/AVIF) con alt text real — depende de que lleguen las fotos (Fase 1)
 
 ## 6. QA
 - [ ] Pruebas responsivas (celular, tablet, escritorio)
