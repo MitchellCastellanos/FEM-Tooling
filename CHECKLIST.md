@@ -46,7 +46,8 @@ certificaciones) — ver comentarios `TODO` en el código._
 
 ## 4. Funcionalidad
 - [x] Formulario de cotización con adjuntos — UI lista, guarda en consola
-- [ ] Conectar proveedor de correo real (Resend, gratis para este volumen) apuntando al correo de GABAN que Mitchell comparta — hoy es una ruta de prueba (`src/app/api/cotizacion/route.ts`) que solo guarda en consola
+- [x] Conectar Resend para el envío real, usando `hello@gabansolutions.ca` (dominio ya verificado en la cuenta de Resend de Mitchell)
+- [ ] **Falta:** agregar la variable de entorno `RESEND_API_KEY` en Vercel (Project Settings → Environment Variables) para que funcione en producción; sin ella el formulario responde error 500 en vez de fallar en silencio
 - [ ] Panel de indicadores (reporte simple sobre Analytics)
 - [ ] Conectar Google Analytics: **en espera** del acceso del cliente a `G-BF2FDR6KMM` (decisión tomada: no crear una propiedad nueva aparte)
 
